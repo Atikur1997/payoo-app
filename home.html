@@ -21,7 +21,7 @@
             <div class=" flex gap-5">
                 <img src="assets/Group.png" alt="">
                 <div>
-                    <h1 class="font-bold text-xl">$ <span>45000.00</span></h1>
+                    <h1 class="font-bold text-xl">$ <span id="balance">45000.00</span></h1>
                     <p class="text-[#08080880]">Available Balance</p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div>
                 <label class="text-lg font-semibold">Select A Bank</label>
                 <fieldset class="fieldset">
-                    <select class="select w-full bg-[#f4f5f7]  w-full rounded-3xl">
+                    <select class="select w-full bg-[#f4f5f7]  w-full rounded-3xl " id="bankName">
                         <option disabled selected>Select a bank</option>
                         <option>Duch Bangla Bank</option>
                         <option>Alarafah Bank</option>
@@ -92,24 +92,25 @@
             </div>
             <div class="mt-3">
                 <label for="" class="text-lg font-semibold">Bank Account Number</label> <br>
-                <input type="text" class="input bg-[#f4f5f7]  w-full rounded-3xl"
+                <input type="text" id="accountNumber" class="input bg-[#f4f5f7]  w-full rounded-3xl"
                     placeholder="Enter 11 digit account number" id="accountNumber" />
             </div>
             <div class="mt-3">
                 <label for="" class="text-lg font-semibold ">Amount to Add</label> <br>
-                <input type="text" class="input bg-[#f4f5f7]  w-full rounded-3xl" placeholder="Add Amount to withdraw"
-                    id="account" />
+                <input type="text" class="input bg-[#f4f5f7]  w-full rounded-3xl" id="amountToAdd"
+                    placeholder="Add Amount to withdraw" />
             </div>
             <div class="mt-5">
                 <label class="outfit font-semibold text-lg">4-digit Pin</label> <br>
                 <input type="password" class="input bg-[#f4f5f7]  w-full rounded-3xl"
                     placeholder="Enter your 4-digit pin number" id="pin2" />
             </div>
-            <button class="btn w-full rounded-3xl bg-[#0874f2] outfit text-xl font-bold text-white my-5  ">Add
+            <button class="btn w-full rounded-3xl bg-[#0874f2] outfit text-xl font-bold text-white my-5  "
+                id="addMoney">Add
                 Money</button>
         </form>
     </div>
-
+    <script src="./home.js"></script>
 </body>
 
 </html>
