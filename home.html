@@ -15,20 +15,101 @@
 
 </head>
 
-<body class="bg-[#f4f5f7] h-[100vh] outfit">
-    <div class="border-b-2 min-h-[50px] flex justify-between items-center p-5 max-w-lg mx-auto">
-        <div class=" flex gap-5">
-            <img src="assets/Group.png" alt="">
+<body class="bg-[#f4f5f7] h-[100 vh] outfit">
+    <div class="bg-white max-w-xl mx-auto p-4 rounded-b-xl">
+        <div class="border-b-3 border-gray-200 min-h-[50px] flex justify-between items-center p-5 max-w-lg mx-auto">
+            <div class=" flex gap-5">
+                <img src="assets/Group.png" alt="">
+                <div>
+                    <h1 class="font-bold text-xl">$ <span>45000.00</span></h1>
+                    <p class="text-[#08080880]">Available Balance</p>
+                </div>
+            </div>
             <div>
-                <h1 class="font-bold text-xl">$ <span>45000.00</span></h1>
-                <p class="text-[#08080880]">Available Balance</p>
+                <button class="btn btn-soft text-xl text-[#08080880]"><i
+                        class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700 "></i>Logout</button>
             </div>
         </div>
-        <div>
-            <button class="btn btn-soft text-xl text-[#08080880]"><i
-                    class="fa-solid fa-arrow-right-from-bracket rotate-180  "></i>Logout</button>
+
+        <div class="mt-8 max-w-lg mx-auto mt-8">
+            <h1 class="text-2xl font-bold ">🔥 Welcome to Payooo!</h1>
+            <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+        </div>
+
+        <div class=" h-[200px] max-w-lg mx-auto text-lg grid grid-cols-3 gap-4 p-3 mt-5 ">
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/wallet1.png" alt="" class="mx-auto scale-150">
+                <h2>Add Money</h2>
+            </div>
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/send1.png" alt="" class="mx-auto scale-150 ">
+                <h2>Cashout</h2>
+            </div>
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/money1.png" alt="" class="mx-auto scale-150">
+                <h2>Transfer Money</h2>
+            </div>
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/bonus1.png" alt="" class="mx-auto scale-150">
+                <h2>Get Bounus</h2>
+            </div>
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/purse1.png" alt="" class="mx-auto scale-150">
+                <h2>Pay bill</h2>
+            </div>
+            <div class="border-2 border-gray-300 text-center py-3 rounded-md">
+                <img src="assets/transaction1.png" alt="" class="mx-auto scale-150">
+                <h2>Transactions</h2>
+            </div>
+
+
         </div>
     </div>
+
+    <!-- add Money section starts here  -->
+    <div class="all-form-section max-w-xl mx-auto mt-5">
+        <h2 class="text-lg font-bold outfit mb-5 px-3">Add Money</h2>
+        <form class="bg-white rounded-2xl p-5 ">
+            <div>
+                <label class="text-lg font-semibold">Select A Bank</label>
+                <fieldset class="fieldset">
+                    <select class="select w-full bg-[#f4f5f7]  w-full rounded-3xl">
+                        <option disabled selected>Select a bank</option>
+                        <option>Duch Bangla Bank</option>
+                        <option>Alarafah Bank</option>
+                        <option>City Bank</option>
+                        <option>Islami Bank</option>
+                        <option>Prime Bank</option>
+                        <option>Trust Bank</option>
+                        <option>Sonali Bank</option>
+                        <option>Janata Bank</option>
+                        <option>Brack Bank</option>
+                        <option>Estern Bank Limited</option>
+                    </select>
+
+                </fieldset>
+            </div>
+            <div class="mt-3">
+                <label for="" class="text-lg font-semibold">Bank Account Number</label> <br>
+                <input type="text" class="input bg-[#f4f5f7]  w-full rounded-3xl"
+                    placeholder="Enter 11 digit account number" id="accountNumber" />
+            </div>
+            <div class="mt-3">
+                <label for="" class="text-lg font-semibold ">Amount to Add</label> <br>
+                <input type="text" class="input bg-[#f4f5f7]  w-full rounded-3xl" placeholder="Add Amount to withdraw"
+                    id="account" />
+            </div>
+            <div class="mt-5">
+                <label class="outfit font-semibold text-lg">4-digit Pin</label> <br>
+                <input type="password" class="input bg-[#f4f5f7]  w-full rounded-3xl"
+                    placeholder="Enter your 4-digit pin number" id="pin2" />
+            </div>
+            <button class="btn w-full rounded-3xl bg-[#0874f2] outfit text-xl font-bold text-white my-5  ">Add
+                Money</button>
+        </form>
+    </div>
+
 </body>
 
 </html>
