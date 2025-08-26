@@ -31,20 +31,48 @@ document.getElementById('addMoney').addEventListener('click', (e) => {
 // toggling features
 
 document.getElementById('addMoneyBtn').addEventListener('click', () => {
-    cashOutParent.classList.add('hidden');
-    document.getElementById('add-money-parent').classList.remove('hidden');
-    document.getElementById('add-money-parent').classList.add('block');
+    let forms = document.getElementsByClassName('form')
+
+    for (let form of forms) {
+        console.log(form);
+        form.classList.add('hidden');
+    }
+
+    document.getElementById('add-money-parent').classList.remove('hidden')
+    document.getElementById('add-money-parent').classList.add('block')
+
 })
 //Cash out section
 document.getElementById('cashOut').addEventListener('click', () => {
-    cashOutParent.classList.remove('hidden');
-    cashOutParent.classList.add('block');
-    document.getElementById('add-money-parent').classList.add('hidden');
+    let forms = document.getElementsByClassName('form')
+
+    for (let form of forms) {
+        console.log(form);
+        form.classList.add('hidden');
+    }
+
+    document.getElementById('cashoutParent').classList.remove('hidden')
+    document.getElementById('cashoutParent').classList.add('block')
 
 })
 
-document.getElementById("Cashbtn").addEventListener("click", () => {
+//transfer money section toggle
 
+document.getElementById('transferMoney').addEventListener('click', () => {
+    let forms = document.getElementsByClassName('form')
+
+    for (let form of forms) {
+        console.log(form);
+        form.classList.add('hidden');
+    }
+
+    document.getElementById('transferMoneyParent').classList.remove('hidden')
+    document.getElementById('transferMoneyParent').classList.add('block')
+})
+
+//cashout Button starts here
+document.getElementById("Cashbtn").addEventListener("click", (e) => {
+    e.preventDefault();
     const pinNumber = 3344;
     const pin2 = parseInt(document.getElementById('pinCashOut').value);
     let mainBalance = parseFloat(document.getElementById('balance').innerText)
@@ -67,3 +95,34 @@ document.getElementById("Cashbtn").addEventListener("click", () => {
     document.getElementById('balance').innerText = newAmount;
 })
 
+//transfer Button click starts here
+
+document.getElementById('transferBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('clicked');
+    const pinNumber = 3344;
+    const pin2 = parseInt(document.getElementById('transferPin').value);
+    let mainBalance = parseFloat(document.getElementById('balance').innerText);
+
+    // validate account number
+    if (document.getElementById("transferAccountNumber").value.length < 11) {
+        alert("Please enter a valid account number");
+        return;
+    }
+
+    // validate pin
+    if (pin2 !== pinNumber) {
+        alert('Please enter a valid pin');
+        return;
+    }
+
+    // validate balance
+    if (mainBalance < parseFloat(document.getElementById('userTransfer').value)) {
+        alert('Insufficient Balance');
+        return;
+    }
+
+    // update balance
+    let newAmount = (mainBalance - parseFloat(document.getElementById('userTransfer').value)).toFixed(2);
+    document.getElementById('balance').innerText = newAmount;
+});
